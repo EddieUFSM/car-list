@@ -3,6 +3,7 @@ import React from 'react'
 import NavBar from '../components/NavBar'
 import Header from '../components/Header'
 import Table from '../components/BrandingTable'
+import Footer from '../components/Footer'
 const useStyles = makeStyles((theme) => ({
     root: {
         backgroundColor: '#F7F8FB',
@@ -17,9 +18,9 @@ export default function Index() {
     return (
         <div className={classes.root}>
             <NavBar name={'Navitar'} />
-
             <Header name={'Veículos'} />
             <Table />
+            <Footer />
         </div>
     )
 }
