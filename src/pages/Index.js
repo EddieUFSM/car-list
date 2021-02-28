@@ -17,7 +17,7 @@ export default function Index() {
     const classes = useStyles();
     return (
         <div className={classes.root}>
-            <NavBar name={'Navitar'} />
+            <NavBar name={'Navita'} />
             <Header name={'Veículos'} />
             <Table />
             <Footer />

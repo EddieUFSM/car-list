@@ -119,7 +119,7 @@ export default function CustomizedTables() {
                             <StyledTableRow >
                                 <StyledTableCell colSpan={1}>{row.nome}</StyledTableCell>
                                 <StyledTableCell colSpan={1} align="left">
-                                    <Link className={classes.link} component="button" underline='none' color='secondary' key={row.codigo} onClick={(key) => lodingTable(row.codigo)}>Modelos</Link>
+                                    <Link className={classes.link} component="button" underline='none' color='secondary' key={row.codigo} onClick={(key) => lodingTable(row.codigo)}>Ver modelos</Link>
                                 </StyledTableCell>
                             </StyledTableRow>
                         ))}
