@@ -25,7 +25,11 @@ const StyledTableCell = withStyles(() => ({
     },
 }))(TableCell);
 
+
+
+
 const StyledTableRow = withStyles((theme) => ({
+    color: '#5A5C69'
 }))(TableRow);
 
 const useStyles = makeStyles({
@@ -38,7 +42,8 @@ const useStyles = makeStyles({
         borderTopLeftRadius: 0,
         borderTopRightRadius: 0,
         minWidth: 700,
-        boxShadow: "0px 30px 80px rgba(58, 59, 69, .15)"
+        boxShadow: "0px 30px 80px rgba(58, 59, 69, .15)",
+        color: '#5A5C69',
     },
     tableHeader: {
         borderBottomLeftRadius: 0,
@@ -46,7 +51,8 @@ const useStyles = makeStyles({
         minWidth: 700,
         boxShadow: "0px 30px 80px rgba(58, 59, 69, .15)",
         backgroundColor: "#F8F9FC",
-        borderBottomStyle: 2
+        borderBottomStyle: 2,
+        color: '#5A5C69',
 
     },
     link: {
@@ -112,7 +118,21 @@ export default function CustomizedTables() {
                 </Table>
             </TableContainer>
 
-            <TableContainer component={Paper} style={{ borderCollapse: 'unset', padding: '20px', width: 'auto' }} className={classes.tableBody}>
+            <TableContainer component={Paper} style={{
+                borderCollapse: 'unset', padding: '20px', width: 'auto', borderTopLeftRadius: 0,
+                borderTopLeftRadius: 0,
+            }} >
+                <Table aria-label="customized table" >
+                    <TableHead style={{ borderCollapse: 'collapse', background: 'none', borderTop: '1pt solid rgba(224, 224, 224, 1)' }}>
+                        <TableRow >
+                            <TableCell colSpan={2} >
+                                <Typography variant="h5">
+                                    Marca
+                                </Typography>
+                            </TableCell>
+                        </TableRow>
+                    </TableHead>
+                </Table>
                 <Table aria-label="customized table" >
                     <TableBody>
                         {marcar.map((row) => (
